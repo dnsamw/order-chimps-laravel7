@@ -1,0 +1,26 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+.svg-path {
+stroke-dasharray: 1000;
+stroke-dashoffset: 1000;
+animation: dash 1.2s 1s ease-in-out forwards;
+}
+
+@keyframes dash {
+to {
+stroke-dashoffset: 0;
+}
+}
+</style>
+<path class="svg-path"   d="M75.2462 62.2674C75.2462 62.2674 66.53 49.0326 64.0331 38.1743" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="svg-path"   d="M104.075 61.754C104.075 61.754 104.752 43.3874 110.535 32.9386" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="svg-path"   d="M31.2688 53.1335C31.2688 53.1335 44.2026 70.4407 52.4781 76.7914" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="svg-path"   d="M15.1218 100.539C15.1218 100.539 30.9279 107.272 41.0798 101.925" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="svg-path"   d="M24.8119 128.245C24.8119 128.245 42.6676 122.925 54.5801 120.186" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path  class="svg-path"  d="M78.793 129.791C78.793 129.791 69.7017 147.331 65.0972 152.345" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path  class="svg-path"  d="M116.319 135.635C116.319 135.635 113.71 147.742 109.797 165.529" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path  class="svg-path"  d="M156.472 128.339C156.472 128.339 162.507 136.793 165.435 153.011" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path  class="svg-path"  d="M169.042 109.393C169.042 109.393 181.116 121.099 184.196 122.272" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path  class="svg-path"  d="M162.857 85.2988C162.857 85.2988 177.184 83.1756 179.621 80.811" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path  class="svg-path"  d="M134.987 63.7536C134.987 63.7536 143.93 47.7652 156.472 43.6058" stroke="#FFB627" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

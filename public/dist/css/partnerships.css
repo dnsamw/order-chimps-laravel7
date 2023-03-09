@@ -1,0 +1,203 @@
+.partners-content {
+    min-height: 100vh;
+}
+
+.showcase {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    /* top: 1rem; */
+    min-height: 100vh;
+    background-color: white;
+    padding: 4rem;
+    margin-top: -1rem;
+    padding-top: 8rem;
+}
+.showcase .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+.showcase .text-wrapper h3 {
+    font-size: 3.2rem;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+.showcase .text-wrapper p {
+    font-size: 1.2rem;
+    color: #000000;
+}
+.showcase .video-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showcase .video-wrapper img {
+    max-width: 100%;
+    height: 25rem;
+}
+
+.choice-container {
+    min-height: 20vh;
+    /* Rounded sliders */
+}
+.choice-container .subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choice-container .subscribe .form-input {
+    display: flex;
+}
+.choice-container .subscribe .subscribe-btn {
+    padding: 0.8rem 2rem;
+    border: 1px solid #ffb627;
+    border-radius: 0 5rem 5rem 0;
+    background: #ffb627;
+    color: #000;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.choice-container .subscribe input {
+    padding: 0.7rem 1rem;
+    border-radius: 5rem 0 0 5rem;
+    outline: none;
+    border: 1px solid #ffb627;
+    font-size: 0.9rem;
+    margin: none;
+}
+.choice-container .subscribe ::-moz-placeholder {
+    color: #d1d1d1;
+}
+.choice-container .subscribe ::placeholder {
+    color: #d1d1d1;
+}
+.choice-container .options-wrapper {
+    display: flex;
+}
+.choice-container .options-wrapper .partner-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    padding: 3rem 0;
+}
+.choice-container .options-wrapper .partner-option h4 {
+    font-size: 2rem;
+}
+.choice-container .subscribe {
+    min-height: 10vh;
+}
+.choice-container .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.choice-container .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.choice-container .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+.choice-container .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+.choice-container input:checked + .slider {
+    background-color: #ffb627;
+}
+.choice-container input:focus + .slider {
+    box-shadow: 0 0 1px #ffb627;
+}
+.choice-container input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.choice-container .slider.round {
+    border-radius: 34px;
+}
+.choice-container .slider.round:before {
+    border-radius: 50%;
+}
+
+/***** The important stuff *****/
+.doodle-sun {
+    position: relative;
+}
+
+.doodle-sun:before {
+    content: "";
+    position: relative;
+    width: 100%;
+    height: 4.45em;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    background-image: url("/svg/doodles/doodle-sun.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.doodle-sun:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4.45em;
+    left: 0;
+    bottom: -65px;
+    width: 100%;
+    z-index: -1;
+    background-image: url("/svg/doodles/doodle-sun.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@media only screen and (max-width: 1300px) {
+    .showcase {
+        padding-top: 8rem !important;
+        flex-direction: column-reverse;
+    }
+    .showcase h3 {
+        font-size: 2.5rem !important;
+    }
+    .showcase .text-wrapper,
+    .showcase .video-wrapper {
+        width: 100%;
+    }
+    .choice-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .choice-container .options-wrapper {
+        flex-direction: column-reverse;
+    }
+    .choice-container .options-wrapper .partner-option {
+        width: 100%;
+        padding: 2rem 0;
+    }
+} /*# sourceMappingURL=partners.css.map */

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Orderchimps Mailer</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .mail-head {
+                padding: 2rem;
+                background-color: #ffb627;
+            }
+
+            .mail-body {
+                padding: 1rem 2rem;
+                background-color: antiquewhite;
+            }
+
+            .mail-body h2 {
+                padding: 1rem 0;
+            }
+            .mail-body p {
+                padding: 0.5rem 0;
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="mail-head">
+                <h1>Orderchimps Contact Message</h1>
+                <small>orderchimps.com</small>
+            </div>
+
+            <div class="mail-body">
+                <h2>Contact Details</h2>
+                <div class="details">
+                    <p>First Name : {{$details['first_name']}}</p>
+                    <p>Last Name : {{$details['last_name']}}</p>
+                    <p>
+                        E-mail :
+                        <a href="mailto: {{$details['email']}}"
+                            >{{$details['email']}}</a
+                        >
+                    </p>
+                    <p>
+                        Phone :
+                        <a href="tel:{{$details['phone']}}"
+                            >{{$details['phone']}}</a
+                        >
+                    </p>
+                    <p>Country : {{$details['country']}}</p>
+                    <p>City : {{$details['city']}}</p>
+                    <p>Restaurant Name : {{$details['restaurant_name']}}</p>
+                    <p>Subject : {{$details['subject']}}</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Orderchimps Mailer</title>
+    </head>
+    <body>
+        <h1>Contact Message</h1>
+        <p>First Name : {{$details['first_name']}}</p>
+        <p>Last Name : {{$details['last_name']}}</p>
+        <p>E-mail : {{$details['email']}}</p>
+        <p>Phone : {{$details['phone']}}</p>
+        <p>Country : {{$details['country']}}</p>
+        <p>City : {{$details['city']}}</p>
+        <p>Restaurant Name : {{$details['restaurant_name']}}</p>
+        <p>Subject : {{$details['subject']}}</p>
+    </body>
+</html>
