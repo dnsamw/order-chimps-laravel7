@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mail Message</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                font-family: "Lucida Sans", "Lucida Sans Regular",
+                    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+                    sans-serif;
+            }
+
+            .alert-wrapper {
+                min-height: 100vh;
+                width: 100%;
+                background: #0000003b;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .submit-message-container span {
+                padding: 1.5rem;
+            }
+            .submit-message-container {
+                position: relative;
+                font-size: 1.5rem;
+                background-color: #000000;
+                padding: 4rem;
+                border-radius: 20px;
+                color: #ffffff;
+
+                /* background: rgba(255, 255, 255, 0.2);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.18); */
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .bubble-btn {
+                background-color: #ffffff;
+                border: 1px solid #ffe0a3;
+                padding: 14px;
+                border-radius: 50%;
+                color: #ffb627;
+                height: 60px;
+                width: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #form-popup-close-icon {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+
+            #form-popup-close-icon a {
+                padding: 12px;
+                height: 20px;
+                width: 20px;
+            }
+
+            /* ANIMATION */
+
+            .loading {
+                animation: rotation 1s infinite linear;
+                border: 2px solid rgb(255, 182, 39);
+                border-radius: 50%;
+                border-top-color: rgba(255, 183, 39, 0.806);
+                height: 2em;
+                width: 2em;
+            }
+
+            @keyframes rotation {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="alert-wrapper" id="alert-wrapper">
+            <div class="submit-message-container">
+                <span id="form-popup-close-icon">
+                    <a class="bubble-btn" href="#">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-6 h-6"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </a>
+                </span>
+                <span style="text-align: center">
+                    Please wait your message is sending..
+                </span>
+
+                <!-- GRADIENT SPINNER -->
+                <div class="loading"></div>
+            </div>
+        </div>
+        <script>
+            const formPopupCloseBtn = document.querySelector(
+                ".submit-message-container"
+            );
+            formPopupCloseBtn.addEventListener("click", (e) => {
+                console.log(e);
+                document.querySelector("#alert-wrapper").style.display = "none";
+            });
+        </script>
+    </body>
+</html>

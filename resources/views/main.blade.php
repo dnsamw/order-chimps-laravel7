@@ -13,6 +13,23 @@
 @endpush
 
 @section('content')
+
+{{-- form alert messages --}}
+
+<div class="alert-wrapper" id="alert-wrapper">
+    <div class="submit-message-container">
+        <span style="text-align: center">
+            Please wait your message is sending..
+        </span>
+
+        <!-- GRADIENT SPINNER -->
+        <div class="loading"></div>
+    </div>
+</div>
+
+
+{{-- form alert messages --}}
+
 <div class="container" id="main">
   <!-- HERO SECTION -->
   <section class="hero-container section-2">
@@ -716,7 +733,7 @@ xmlns="http://www.w3.org/2000/svg"
         <stop offset="0.78551" stop-color="#343432"/>
         <stop offset="1" stop-color="#40403D"/>
         </linearGradient>
-        <linearGradient id="paint12_linear_51_354" x1="nan" y1="nan" x2="nan" y2="nan" gradientUnits="userSpaceOnUse">
+        <linearGradient id="paint12_linear_51_354"  gradientUnits="userSpaceOnUse">
         <stop stop-color="#FAC269"/>
         <stop offset="0.31564" stop-color="#EC5942"/>
         <stop offset="0.74022" stop-color="#C13086"/>
@@ -1630,6 +1647,25 @@ xmlns="http://www.w3.org/2000/svg"
         <div class="shape-blob"></div>
         <div class="shape-blob one"></div>
         <div class="shape-blob two"></div> -->
+
+<script>
+        // TYPING EFFECT
+        new Typed("#h1anim", {
+        strings: [
+            "Is digital marketing causing you headaches?",
+            "Too many systems to manage your business?",
+            "Need more sales from your website?",
+            "Need to reduce expenses to improve your bottom line?",
+        ],
+        typeSpeed: 90,
+        cursorChar: "",
+        backSpeed: 50,
+        delaySpeed: 100,
+        loop: true,
+    });
+</script>
+
+
   </section>
 
   <!-- SECTION DIVIDER -->
@@ -11399,7 +11435,7 @@ xmlns="http://www.w3.org/2000/svg"
     });
 
     popup.addEventListener("focusout", (e) => {
-      console.log("FOCUSOUT");
+      //console.log("FOCUSOUT");
     });
 
     const smallDevice = window.matchMedia("(min-width: 820px)");
@@ -11407,7 +11443,7 @@ xmlns="http://www.w3.org/2000/svg"
     smallDevice.addListener(handleDeviceChange);
 
     function injectContent(currentFtureID) {
-      console.log(currentFtureID);
+      //console.log(currentFtureID);
       if (currentFtureID === "HybridPos") {
         popup.querySelector("#title").innerText = "Hybrid POS";
         popup.querySelector("#popup-text").innerText =
@@ -11489,7 +11525,7 @@ xmlns="http://www.w3.org/2000/svg"
 
             popup.querySelector("#title").innerText = "DESKTOP";
 
-            console.log(e.target.id);
+            //console.log(e.target.id);
             injectContent(e.target.id);
 
             // console.log("X AXIS ===========================");
@@ -11883,9 +11919,48 @@ xmlns="http://www.w3.org/2000/svg"
             <input class="demo-button" type="submit" value="Submit" />
           </div>
         </div>
+
         @if (Session::has('message_sent'))
-        <h1 style="text-align: center" >{{Session::get('message_sent')}} SAMPLE TEXT</h1>
+
+        <div class="alert-wrapper-2 active-flex" id="alert-wrapper-2">
+            <div class="submit-message-container">
+                <span id="form-popup-close-icon">
+                    <a class="bubble-btn">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            stroke="#ffb627"
+                            viewBox="0 0 24 24"
+                            stroke-width="1"
+                            stroke="currentColor"
+                            class="w-6 h-6"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </a>
+                </span>
+            <span style="text-align: center" >{{Session::get('message_sent')}}</span>
+        </div>
+        </div>
+        <script>
+            const formPopupCloseBtn = document.querySelector(
+                "#form-popup-close-icon"
+            );
+            formPopupCloseBtn.addEventListener("click", (e) => {
+               const alertBox =  document.querySelector("#alert-wrapper-2")
+
+                //console.log(e.target,alertBox);
+                alertBox.classList.remove("active-flex");
+                alertBox.style.display = "none";
+                //document.querySelector("#alert-wrapper-2").classList.remove("active-flex");
+            });
+        </script>
        @endif
+
       </form>
 
       <script>
@@ -11906,6 +11981,7 @@ xmlns="http://www.w3.org/2000/svg"
           //invoke the method
           if(ocForm.validate() === true){ 
             //validation successful, process form data here
+            document.querySelector("#alert-wrapper").style.display = "flex";
             ocFormRef.submit()
           } else {
             //validation failed
@@ -12134,14 +12210,12 @@ const subjectFormSelector = document.getElementById(
   
     const querySubject = parseQuery(queryString)['subject'];
 
-    console.log('GGGGGGGGGG',querySubject);
-    //console.log(subjectFormSelector.options.indexOf(parseQuery(queryString)['subject']));
     const formOptions =[];
     for (const option of subjectFormSelector.options) {
       formOptions.push(option.value)
     }
     
-    console.log(formOptions);
+    //console.log(formOptions);
     const optionIndex = formOptions.indexOf(querySubject);
 
     if (optionIndex > 0) {

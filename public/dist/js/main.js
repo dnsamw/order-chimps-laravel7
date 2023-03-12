@@ -670,20 +670,20 @@ document.addEventListener("DOMContentLoaded", function () {
     //   })
     // })
 
-    // TYPING EFFECT
-    new Typed("#h1anim", {
-        strings: [
-            "Is digital marketing causing you headaches?",
-            "Too many systems to manage your business?",
-            "Need more sales from your website?",
-            "Need to reduce expenses to improve your bottom line?",
-        ],
-        typeSpeed: 90,
-        cursorChar: "",
-        backSpeed: 50,
-        delaySpeed: 100,
-        loop: true,
-    });
+    // // TYPING EFFECT
+    // new Typed("#h1anim", {
+    //     strings: [
+    //         "Is digital marketing causing you headaches?",
+    //         "Too many systems to manage your business?",
+    //         "Need more sales from your website?",
+    //         "Need to reduce expenses to improve your bottom line?",
+    //     ],
+    //     typeSpeed: 90,
+    //     cursorChar: "",
+    //     backSpeed: 50,
+    //     delaySpeed: 100,
+    //     loop: true,
+    // });
 });
 
 //backup - <span id='typed_h1'>The Digital Food</span><br /><span id='typed_h2'>Experience,</span><br /><span class='yellow' id='typed_h3'>Evolved.</span>

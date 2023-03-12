@@ -14,6 +14,22 @@
 
 @section('content')
 
+{{-- form alert messages --}}
+
+<div class="alert-wrapper" id="alert-wrapper">
+  <div class="submit-message-container">
+      <span style="text-align: center">
+          Please wait your message is sending..
+      </span>
+
+      <!-- GRADIENT SPINNER -->
+      <div class="loading"></div>
+  </div>
+</div>
+
+
+{{-- form alert messages --}}
+
 <section class="partners-content" id="main">
     <section class="showcase">
       <div class="text-wrapper">
@@ -70,10 +86,51 @@
                   name="email" 
                   placeholder="Your Email" />
                   <button type="submit" class="subscribe-btn">Let's collaborate</button>
-                  <br />
             </div>
               </div>
             </div>
+
+            @if (Session::has('message_sent'))
+
+            <div class="alert-wrapper-2 active-flex" id="alert-wrapper-2">
+                <div class="submit-message-container">
+                    <span id="form-popup-close-icon">
+                        <a class="bubble-btn">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                stroke="#ffb627"
+                                viewBox="0 0 24 24"
+                                stroke-width="1"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M6 18L18 6M6 6l12 12"
+                                ></path>
+                            </svg>
+                        </a>
+                    </span>
+                <span style="text-align: center" >{{Session::get('message_sent')}}</span>
+            </div>
+            </div>
+            <script>
+                const formPopupCloseBtn = document.querySelector(
+                    "#form-popup-close-icon"
+                );
+                formPopupCloseBtn.addEventListener("click", (e) => {
+                   const alertBox =  document.querySelector("#alert-wrapper-2")
+    
+                    console.log(e.target,alertBox);
+                    alertBox.classList.remove("active-flex");
+                    alertBox.style.display = "none";
+                    //document.querySelector("#alert-wrapper-2").classList.remove("active-flex");
+                });
+            </script>
+           @endif
+
           </form>
           <script>
             const partnerFormRef = document.querySelector('#oc_partner_form');
@@ -86,6 +143,7 @@
               //invoke the method
               if(prtnerForm.validate() === true){ 
                 //validation successful, process form data here
+                document.querySelector("#alert-wrapper").style.display = "flex";
                 partnerFormRef.submit()
               } else {
                 //validation failed

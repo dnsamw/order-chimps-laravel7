@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\ContactMail;
-use App\Mail\PartnerMail;
+use App\Mail\ContactFormMail;
+use App\Mail\PartnerFormMail;
 use Illuminate\Http\Request;
 use Mail;
 
@@ -29,7 +29,7 @@ class ContactController extends Controller
             'subject' => $request->subject,
         ];
 
-        Mail::to('dnsam.dell@gmail.com')->send(new ContactMail($details));
+        Mail::to('dnsam.dell@gmail.com')->send(new ContactFormMail($details));
         return back()->with('message_sent', 'Your query has been sent successfully!');
     }
 
@@ -40,7 +40,7 @@ class ContactController extends Controller
             'email' => $request->email,
         ];
 
-        Mail::to('dnsam.dell@gmail.com')->send(new PartnerMail($details));
+        Mail::to('dnsam.dell@gmail.com')->send(new PartnerFormMail($details));
         return back()->with('message_sent', 'Your query has been sent successfully!');
     }
 }
