@@ -5,7 +5,7 @@
 @endsection
 
 @section('description')
-{{'Looking for a comprehensive POS platform? Look no further than Orderchimps! Our platform includes a hybrid POS system with e-commerce solutions, and we offer digital marketing services to help boost your online presence. Contact us today to learn more.'}}
+{{'Bringing sustainable and technology-driven efficiency to food service sector businesses. Connect with consumers through our e-commerce ready POS platform and digital services, including digital presence and marketing.'}}
 @endsection
 
 @push('validate-js')
@@ -1714,9 +1714,9 @@ xmlns="http://www.w3.org/2000/svg"
               <div class="offer-header">
                 <h2>One platform to rule them all</h2>
                 <p>
-                  All the below features for <span>£75*</span>, grab your
-                  account now!!!
+                  All the below features for £75 Only!
                 </p>
+                <p>Self signup now and claim your  <br /><br /> <span> 50% discount* </span></p>
               </div>
               <div class="hero-btns-container">
                 <span class="demo-button">
@@ -1726,7 +1726,8 @@ xmlns="http://www.w3.org/2000/svg"
                     >Sign me up</a
                   >
                 </span>
-              </div>
+            </div>
+            <p class="small">*limited time offer</p>
               <div class="offer-body">
                 <div class="column">
                   <a href="/hybrid-pos">POS Platform</a>
@@ -1902,10 +1903,11 @@ xmlns="http://www.w3.org/2000/svg"
 
           <div class="offer-header">
             <h2>One platform to rule them all</h2>
+            <br>
             <p>
-              All the below features for <span>£75*</span>, grab your
-              account now!!!
-            </p>
+                All the below features for £75 Only!
+              </p>
+              <p>Self signup now and claim your <span>50% discount* </span></p>
           </div>
           <div class="hero-btns-container">
             <span class="demo-button">
@@ -11493,9 +11495,9 @@ xmlns="http://www.w3.org/2000/svg"
         popup.querySelector("#popup-text").innerText =
           "Accept payments from customers instantly, saving them time. Empower your Customers  to order tableside and pay with their own device.";
       }else if (currentFtureID === "MealsDealsNPlans") {
-        popup.querySelector("#title").innerText = "Meals Deals & Plans";
+        popup.querySelector("#title").innerText = "Meal Deals & Subscriptions";
         popup.querySelector("#popup-text").innerText =
-          "Descriprion goes here..";
+          "Create a steady income stream and boost sales efficiency while creating more loyal customers by offering them deals and subscription plans.";
       }
     }
 

@@ -5,13 +5,17 @@
 @endpush
 
 @section('title')
-    {{'Careers'}}
+{{'Careers'}}
+@endsection
+
+@section('description')
+{{'Explore the exciting career opportunities at this innovative tech startup in the hospitality industry. Join our team of passionate and driven individuals making a difference!'}}
 @endsection
 
 @section('content')
 <div class="container" id="main">
     <div class="careers-header">
-      <h1>Orderchimps Careers</h1>
+      <h1>Careers</h1>
       <p>
         Looking for a place to supercharge your aspirations and bring your
         wildest dreams to life? Look no further than Orderchimps! With the

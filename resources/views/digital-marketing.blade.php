@@ -5,7 +5,11 @@
 @endpush
 
 @section('title')
-    {{'Digital Marketing'}}
+{{'Digital Marketing'}}
+@endsection
+
+@section('description')
+{{'Grow your restaurant business with our digital marketing services. We specialise in social media marketing and other digital marketing strategies to help you reach more customers and build brand awareness.'}}
 @endsection
 
 @section('content')

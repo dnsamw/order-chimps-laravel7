@@ -218,10 +218,11 @@ input[type=reset] {
 }
 .horizontalContainer .offer-header h2 span,
 .horizontalContainer .offer-header p span {
-  font-weight: 900;
+  font-weight: bold;
 }
 .horizontalContainer small {
   text-align: center;
+  font-size: 15px;
   font-weight: 600;
   transform: translateY(-25px);
 }
@@ -1815,8 +1816,14 @@ ul.doodle-dot > li:hover:before {
   width: 100%;
   display: none;
 }
+.mobile-accordion-container .offer-container-mobile .small {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
 .mobile-accordion-container .offer-container-mobile .offer-header p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
   margin: 0;

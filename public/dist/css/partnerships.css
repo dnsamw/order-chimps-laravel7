@@ -28,6 +28,7 @@
 .showcase .text-wrapper p {
     font-size: 1.2rem;
     /* color: #000000; */
+    line-height: 1.3;
 }
 .showcase .video-wrapper {
     width: 50%;

@@ -5,7 +5,11 @@
 @endpush
 
 @section('title')
-    {{'E - Commerce'}}
+{{'E - Commerce'}}
+@endsection
+
+@section('description')
+{{'Discover how e-commerce can help your restaurant business grow with Click & Collect, Delivery, Reservations, Meals Deals & Subscriptions and Gift Vouchers. Streamline operations and increase revenue.'}}
 @endsection
 
 @section('content')
@@ -16,7 +20,7 @@
         <h3
           class="animate__animated animate__fadeInLeft animate__delay-100ms"
         >
-          E - Commerce
+          E Commerce
         </h3>
         <p class="animate__animated animate__fadeInLeft animate__delay-200ms">
           Looking to expand your restaurant's reach and take your operations

@@ -225,13 +225,14 @@ input[type="reset"] {
         p {
             text-align: center;
             span {
-                font-weight: 900;
+                font-weight: bold;
             }
         }
     }
 
     small {
         text-align: center;
+        font-size: 15px;
         font-weight: 600;
         transform: translateY(-25px);
     }
@@ -2085,9 +2086,16 @@ ul.doodle-dot > li:hover:before {
     .offer-container-mobile {
         // background-color: red;
 
+        .small {
+            font-size: 12px;
+            text-align: center;
+            font-weight: bold;
+            margin: 0;
+        }
+
         .offer-header {
             p {
-                font-size: 1.2rem;
+                font-size: 1rem;
                 font-weight: 400;
                 text-align: center;
                 margin: 0;

@@ -5,7 +5,11 @@
 @endpush
 
 @section('title')
-    {{'Digital Marketing Manager'}}
+{{'Digital Marketing Manager'}}
+@endsection
+
+@section('description')
+{{'Get the most out of your restaurant business with an array of integrated and built-in solutions to build customer loyalty, increase reach through email marketing, and maximise exposure on social media with data-driven decisions.'}}
 @endsection
 
 @section('content')

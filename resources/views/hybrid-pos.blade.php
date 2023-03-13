@@ -5,7 +5,11 @@
 @endpush
 
 @section('title')
-    {{'Hybrid POS'}}
+{{'Hybrid POS'}}
+@endsection
+
+@section('description')
+{{'Make your restaurant\'s operation easier and more efficient! Improve customer experience and streamline your POS for the best outcomes while focusing on what matters most: delicious food and happy customers.'}}
 @endsection
 
 @section('content')

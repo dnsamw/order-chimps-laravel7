@@ -5,7 +5,11 @@
 @endpush
 
 @section('title')
-    {{'Digital Presence'}}
+{{'Digital Presence'}}
+@endsection
+
+@section('description')
+{{'Create an undeniable digital presence for your restaurant business with our Brand Identity, Website Design & Development, and SEO services. Stand out and get noticed!'}}
 @endsection
 
 @section('content')

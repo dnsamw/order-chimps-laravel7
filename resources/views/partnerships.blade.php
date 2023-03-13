@@ -5,7 +5,11 @@
 @endpush
 
 @section('title')
-    {{'Partnerships'}}
+{{'Partnerships'}}
+@endsection
+
+@section('description')
+{{'Are you an influencer or reseller looking to partner with a tech startup in the hospitality industry? Connect with us now for exciting opportunities and exclusive rewards!'}}
 @endsection
 
 @push('validate-js')
